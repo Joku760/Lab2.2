@@ -9,12 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var timesButtoned = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    @IBOutlet weak var button: UIButton!
+    
+    @IBAction func macButton(_ sender: Any) {
+        timesButtoned = timesButtoned+1
+        button.setTitle("You have pressed the button " + String(timesButtoned) + " times", for: .normal)
+    }
+    
 }
 
